@@ -31,6 +31,89 @@ namespace kurs2020_sharp
         }
     
     
+
+
+        //Получение и установление соответствующих полей для крестьянина
+        public void set_name(string inn)
+        {
+	        name=inn;
+        }
+        public string get_name()
+        {
+	        return name;
+        }
+        /////
+        public void set_surname(string inn)
+        {
+	        surname=inn;
+        }
+        public string get_surname()
+        {
+	        return surname;
+        }
+        /////
+        public void set_proizv_hleb(int inn)
+        {
+	        proizv_hleb=inn;
+        }
+        public int get_proizv_hleb()
+        {
+	        return proizv_hleb;
+        }
+        /////
+        public void set_proizv_skot(int inn)
+        {
+	        proizv_skot=inn;
+        }
+        public int get_proizv_skot()
+        {
+	        return proizv_skot;
+        }
+        /////
+        public void set_eda_hleb(int inn)
+        {
+	        eda_hleb=inn;
+        }
+        public int get_eda_hleb()
+        {
+	        return eda_hleb;
+        }
+        /////
+        public void set_eda_skot(int inn)
+        {
+	        eda_skot=inn;
+        }
+        public int get_eda_skot()
+        {
+	        return eda_skot;
+        }
+        /////
+        public void set_money_trat(int inn)
+        {
+	        money_trat=inn;
+        }
+        public int get_money_trat()
+        {
+	        return money_trat;
+        }
+        /////
+        public void set_naim(int inn)
+        {
+	        naim=inn;
+        }
+        public int get_naim()
+        {
+	        return naim;
+        }
+        /////
+        public void set_otschet_hours_net_edi(int inn)
+        {
+	        otschet_hours_net_edi=inn;
+        }
+        public int get_otschet_hours_net_edi()
+        {
+	        return otschet_hours_net_edi;
+        }
     }
 
 

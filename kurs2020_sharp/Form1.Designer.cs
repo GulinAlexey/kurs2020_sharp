@@ -95,6 +95,7 @@
             this.new_game_butt.TabIndex = 1;
             this.new_game_butt.Text = "Новая игра";
             this.new_game_butt.UseVisualStyleBackColor = true;
+            this.new_game_butt.Click += new System.EventHandler(this.new_game_butt_Click);
             // 
             // load_game_butt
             // 

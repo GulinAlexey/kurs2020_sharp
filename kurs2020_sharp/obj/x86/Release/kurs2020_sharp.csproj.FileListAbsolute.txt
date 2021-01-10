@@ -6,3 +6,4 @@ C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\R
 C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.pdb
 C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.Form1.resources
 C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.spravk.resources
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.main_game.resources

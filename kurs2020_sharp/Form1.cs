@@ -27,5 +27,12 @@ namespace kurs2020_sharp
             spr.ShowDialog();
             spr.Controls.Clear();
         }
+
+        private void new_game_butt_Click(object sender, EventArgs e)
+        {
+            Form mg = new main_game();
+            mg.ShowDialog();
+            mg.Controls.Clear();
+        }
     }
 }

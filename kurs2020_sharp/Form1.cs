@@ -15,5 +15,17 @@ namespace kurs2020_sharp
         {
             InitializeComponent();
         }
+
+        private void quit_butt_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void spravk_butt_Click(object sender, EventArgs e)
+        {
+            Form spr = new spravk();
+            spr.ShowDialog();
+            spr.Controls.Clear();
+        }
     }
 }

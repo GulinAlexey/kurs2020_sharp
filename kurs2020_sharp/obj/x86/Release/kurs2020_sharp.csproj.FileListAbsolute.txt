@@ -1,0 +1,8 @@
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\bin\Release\kurs2020_sharp.exe
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\bin\Release\kurs2020_sharp.pdb
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.Properties.Resources.resources
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.csproj.GenerateResource.Cache
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.exe
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.pdb
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.Form1.resources
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.spravk.resources

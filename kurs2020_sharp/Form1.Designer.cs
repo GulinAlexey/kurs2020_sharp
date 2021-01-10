@@ -116,6 +116,7 @@
             this.records_butt.TabIndex = 3;
             this.records_butt.Text = "Список рекордов";
             this.records_butt.UseVisualStyleBackColor = true;
+            this.records_butt.Click += new System.EventHandler(this.records_butt_Click);
             // 
             // quit_butt
             // 

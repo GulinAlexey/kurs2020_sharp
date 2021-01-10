@@ -34,5 +34,12 @@ namespace kurs2020_sharp
             mg.ShowDialog();
             mg.Controls.Clear();
         }
+
+        private void records_butt_Click(object sender, EventArgs e)
+        {
+            Form rectab = new record_tabl();
+            rectab.ShowDialog();
+            rectab.Controls.Clear();
+        }
     }
 }

@@ -89,6 +89,7 @@
             this.spravk_lent_butt.Name = "spravk_lent_butt";
             this.spravk_lent_butt.Size = new System.Drawing.Size(81, 20);
             this.spravk_lent_butt.Text = "Справка";
+            this.spravk_lent_butt.Click += new System.EventHandler(this.spravk_lent_butt_Click);
             // 
             // go_to_main_menu_butt
             // 
@@ -96,6 +97,7 @@
             this.go_to_main_menu_butt.Name = "go_to_main_menu_butt";
             this.go_to_main_menu_butt.Size = new System.Drawing.Size(161, 20);
             this.go_to_main_menu_butt.Text = "Выход в главное меню";
+            this.go_to_main_menu_butt.Click += new System.EventHandler(this.go_to_main_menu_butt_Click);
             // 
             // vihod_info
             // 
@@ -196,6 +198,7 @@
             this.spisok_krest_butt.TabStop = false;
             this.spisok_krest_butt.Text = "Список крестьян";
             this.spisok_krest_butt.UseVisualStyleBackColor = true;
+            this.spisok_krest_butt.Click += new System.EventHandler(this.spisok_krest_butt_Click);
             // 
             // birzha_butt
             // 
@@ -208,6 +211,7 @@
             this.birzha_butt.TabStop = false;
             this.birzha_butt.Text = "Товарная биржа";
             this.birzha_butt.UseVisualStyleBackColor = true;
+            this.birzha_butt.Click += new System.EventHandler(this.birzha_butt_Click);
             // 
             // pomoshnik_box
             // 

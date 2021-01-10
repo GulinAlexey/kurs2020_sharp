@@ -16,7 +16,23 @@ namespace kurs2020_sharp
         private int money_trat; //Денежные расходы за один Час Процветания 
         private int naim; //Стоимость найма в рублях 
         private int otschet_hours_net_edi; //Отсчёт времени в Часах Процветания с момента, когда закончилась еда для этого крестьянина
+    
+        public Krest() //конструктор без параметров
+        {
+	        name="name"; 
+	        surname="surname"; 
+	        proizv_hleb=0; 
+	        proizv_skot=0;
+	        eda_hleb=0;
+	        eda_skot=0; 
+	        money_trat=0; 
+	        naim=0; 
+	        otschet_hours_net_edi=0; 
+        }
+    
+    
     }
+
 
     class Village
     {

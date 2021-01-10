@@ -133,5 +133,133 @@ namespace kurs2020_sharp
         private int price_skot; //Текущая цена за одну голову домашнего скота на Торговой бирже в рублях 
 
         public Krest[] krests; //крестьяне
+
+        public Village() //конструктор без параметров
+        {
+	        kolvo_krest=0;
+	        hours_procv=0;
+	        days_procv=0;
+	        speed_life=0;
+	        flag_season=0;
+	        kolvo_hleb=0;
+	        kolvo_skot=0;
+	        budget_village=0;
+	        hours_from_begin_of_season=0;
+	        otschet_hours_net_krest=0;
+	        price_hleb=0;
+	        price_skot=0;
+	        krests=null;
+        }
+
+
+
+        //Получение и установление соответствующих полей для деревни
+        public void set_kolvo_krest(int inn)
+        {
+	        kolvo_krest=inn;
+        }
+        public int get_kolvo_krest()
+        {
+	        return kolvo_krest;
+        }
+        /////
+        public void set_hours_procv(int inn)
+        {
+	        hours_procv=inn;
+        }
+        public int get_hours_procv()
+        {
+	        return hours_procv;
+        }
+        /////
+        public void set_days_procv(int inn)
+        {
+	        days_procv=inn;
+        }
+        public int get_days_procv()
+        {
+	        return days_procv;
+        }
+        /////
+        public void set_speed_life(int inn)
+        {
+	        speed_life=inn;
+        }
+        public int get_speed_life()
+        {
+	        return speed_life;
+        }
+        /////
+        public void set_flag_season(int inn)
+        {
+	        flag_season=inn;
+        }
+        public int get_flag_season()
+        {
+	        return flag_season;
+        }
+        /////
+        public void set_kolvo_hleb(int inn)
+        {
+	        kolvo_hleb=inn;
+        }
+        public int get_kolvo_hleb()
+        {
+	        return kolvo_hleb;
+        }
+        /////
+        public void set_kolvo_skot(int inn)
+        {
+	        kolvo_skot=inn;
+        }
+        public int get_kolvo_skot()
+        {
+	        return kolvo_skot;
+        }
+        /////
+        public void set_budget_village(int inn)
+        {
+	        budget_village=inn;
+        }
+        public int get_budget_village()
+        {
+	        return budget_village;
+        }
+        /////
+        public void set_hours_from_begin_of_season(int inn)
+        {
+        	hours_from_begin_of_season=inn;
+        }
+        public int get_hours_from_begin_of_season()
+        {
+	        return hours_from_begin_of_season;
+        }
+        /////
+        public void set_otschet_hours_net_krest(int inn)
+        {
+	        otschet_hours_net_krest=inn;
+        }
+        public int get_otschet_hours_net_krest()
+        {
+	        return otschet_hours_net_krest;
+        }
+        /////
+        public void set_price_hleb(int inn)
+        {
+	        price_hleb=inn;
+        }
+        public int get_price_hleb()
+        {
+	        return price_hleb;
+        }
+        /////
+        public void set_price_skot(int inn)
+        {
+	        price_skot=inn;
+        }
+        public int get_price_skot()
+        {
+	        return price_skot;
+        }
     }
 }

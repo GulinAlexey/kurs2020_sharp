@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace kurs2020_sharp
 {
@@ -30,7 +31,72 @@ namespace kurs2020_sharp
 	        otschet_hours_net_edi=0; 
         }
     
-    
+        public void Init_rand() //инициализация полей случайно (в фиксированном диапазоне) для новых крестьян
+        {
+            string path= "names.txt";
+            int kolvo_name=0; //начальное значение кол-ва слов в файле
+            //ПОЛУЧИТЬ СЛУЧАЙНОЕ ИМЯ ИЗ ФАЙЛА
+            using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
+            {
+                name="name";
+                while(name!=null) //пока не прочитает весь файл
+                {
+                    name=reader.ReadLine(); //получить строку из файла
+                    kolvo_name+=1; //увеличить кол-во слов на 1
+                }
+                reader.Close(); //закрыть файл
+            }
+            int r1= (int)(DateTime.Now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds);
+            Random randk = new Random(r1);
+            
+            int num_name = randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
+
+            using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
+            {
+                for (int i_n=0; ; i_n++)
+	                {
+		                name=reader.ReadLine(); //получить строку из файла
+		                if (i_n==num_name+1) //если это искомое слово, остановить цикл
+			                break;
+	                }
+                reader.Close(); //закрыть файл
+            }
+
+	        //ПОЛУЧИТЬ СЛУЧАЙНУЮ ФАМИЛИЮ ИЗ ФАЙЛА
+            path= "surnames.txt";
+            int kolvo_sur=0; //начальное значение кол-ва слов в файле
+            using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
+            {
+                surname="surname";
+                while(surname!=null) //пока не прочитает весь файл
+                {
+                    surname=reader.ReadLine(); //получить строку из файла
+                    kolvo_sur+=1; //увеличить кол-во слов на 1
+                }
+                reader.Close(); //закрыть файл
+            }
+
+            int num_sur = randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
+
+            using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
+            {
+                for (int i_nn=0; ; i_nn++)
+	                {
+		                surname=reader.ReadLine(); //получить строку из файла
+		                if (i_nn==num_sur+1) //если это искомое слово, остановить цикл
+			                break;
+	                }
+	                reader.Close(); //закрыть файл
+            }
+
+            proizv_hleb = randk.Next(1, 11); //случайное число в интервале от 1 до 10 включительно
+	        proizv_skot = randk.Next(0, 3); //случайное число в интервале от 0 до 2 включительно
+            eda_hleb = randk.Next(1, 4); //случайное число в интервале от 1 до 3 включительно
+            eda_skot = randk.Next(0, 2); //случайное число в интервале от 0 до 1 включительно
+            money_trat = randk.Next(10, 101); //случайное число в интервале от 10 до 100 включительно
+            naim = randk.Next(5, 51); //случайное число в интервале от 5 до 50 включительно
+	        otschet_hours_net_edi=0;
+        }
 
 
         //Получение и установление соответствующих полей для крестьянина

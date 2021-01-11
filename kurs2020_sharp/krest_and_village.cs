@@ -244,6 +244,27 @@ namespace kurs2020_sharp
             }
         }
 
+
+        public void Delete_krest(int number) //удаление крестьянина с выбранным номером (нумерация от единицы!)
+        {
+	        Krest[] kre_change = new Krest[kolvo_krest-1]; //временный массив крестьян
+            for (int kk = 0; kk < (kolvo_krest - 1); kk++)
+            {
+                kre_change[kk] = new Krest();
+            }
+	        for(int j=0, k1=0; j<kolvo_krest; j++) //перебрать весь массив крестьян в деревне
+	        {
+		        if(j!=(number-1)) //если номер крестьянина не равен искомому, то скопировать его в новый массив
+		        {
+			        kre_change[k1]=this.krests[j];
+			        k1++;
+		        }
+	        }
+	        krests = null; //удалить старый массив
+	        krests = kre_change; //теперь указатель указывает на новый массив
+	        kolvo_krest=kolvo_krest-1; //теперь на 1 крестьянина меньше
+        }
+
         //Получение и установление соответствующих полей для деревни
         public void set_kolvo_krest(int inn)
         {

@@ -75,5 +75,19 @@ namespace kurs2020_sharp
 				this.trud_butt.Enabled = true;
 			}
         }
+
+        private void izgnat_butt_Click(object sender, EventArgs e)
+        {
+             Program.derevn.Delete_krest(Convert.ToInt32(this.num_krest_pole.Text)); //удалить крестьянина
+             num_krest_pole_TextChanged(sender, e); //повторная проверка
+			 tabl_krest_Activated(sender,e); //обновить таблицу
+        }
+
+        private void tabl_krest_Load(object sender, EventArgs e)
+        {
+            num_krest_pole_TextChanged(sender, e); //проверка
+        }
+
+
     }
 }

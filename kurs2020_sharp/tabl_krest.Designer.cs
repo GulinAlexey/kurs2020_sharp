@@ -100,6 +100,7 @@
             this.izgnat_butt.TabStop = false;
             this.izgnat_butt.Text = "Изгнать";
             this.izgnat_butt.UseVisualStyleBackColor = true;
+            this.izgnat_butt.Click += new System.EventHandler(this.izgnat_butt_Click);
             // 
             // trud_butt
             // 
@@ -224,6 +225,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список крестьян";
             this.Activated += new System.EventHandler(this.tabl_krest_Activated);
+            this.Load += new System.EventHandler(this.tabl_krest_Load);
             this.izgnat_box.ResumeLayout(false);
             this.izgnat_box.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spisok)).EndInit();

@@ -69,7 +69,7 @@ namespace kurs2020_sharp
             int kolvo_strr = Program.birzh_trud.get_kolvo_krest(); //получить кол-во крестьян в списке
             if (this.num_krest_pole.Text !="") //если поле с номером строки не пустое
             {
-                int nummk = Convert.ToInt32(this.num_krest_pole.Text); //номер выбранного крестьянина
+                double nummk = Convert.ToDouble(this.num_krest_pole.Text); //номер выбранного крестьянина
                 if ((nummk > kolvo_strr) || (nummk < 1)) //если выбр. строка больше общего кол-ва строк, то отключить кнопку
                 {
                     this.naim_butt.Enabled = false;
@@ -77,7 +77,7 @@ namespace kurs2020_sharp
                 else
                 {
                     this.naim_butt.Enabled = true;
-                    if ((Program.derevn.get_budget_village() - Program.birzh_trud.krests[nummk - 1].get_naim()) < 0)
+                    if ((Program.derevn.get_budget_village() - Program.birzh_trud.krests[Convert.ToInt32(nummk) - 1].get_naim()) < 0)
                         this.naim_butt.Enabled = false;
                 }
             }

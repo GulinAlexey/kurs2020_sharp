@@ -87,6 +87,7 @@
             this.num_sell.TabIndex = 19;
             this.num_sell.TabStop = false;
             this.num_sell.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.num_sell.TextChanged += new System.EventHandler(this.num_sell_TextChanged);
             // 
             // sell_butt
             // 
@@ -122,6 +123,7 @@
             this.skot_radio.TabIndex = 1;
             this.skot_radio.Text = "Домашний скот";
             this.skot_radio.UseVisualStyleBackColor = false;
+            this.skot_radio.CheckedChanged += new System.EventHandler(this.skot_radio_CheckedChanged);
             // 
             // hleb_radio
             // 

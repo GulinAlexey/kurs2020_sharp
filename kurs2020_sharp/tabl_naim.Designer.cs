@@ -222,6 +222,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Биржа труда";
+            this.Activated += new System.EventHandler(this.tabl_naim_Activated);
+            this.Load += new System.EventHandler(this.tabl_naim_Load);
             this.naim_box.ResumeLayout(false);
             this.naim_box.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spisok)).EndInit();

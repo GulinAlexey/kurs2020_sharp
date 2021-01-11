@@ -46,10 +46,8 @@ namespace kurs2020_sharp
                 }
                 reader.Close(); //закрыть файл
             }
-            int r1= (int)(DateTime.Now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds);
-            Random randk = new Random(r1);
             
-            int num_name = randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
+            int num_name = Program.randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
 
             using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
             {
@@ -76,7 +74,7 @@ namespace kurs2020_sharp
                 reader.Close(); //закрыть файл
             }
 
-            int num_sur = randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
+            int num_sur = Program.randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
 
             using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
             {
@@ -89,12 +87,12 @@ namespace kurs2020_sharp
 	                reader.Close(); //закрыть файл
             }
 
-            proizv_hleb = randk.Next(1, 11); //случайное число в интервале от 1 до 10 включительно
-	        proizv_skot = randk.Next(0, 3); //случайное число в интервале от 0 до 2 включительно
-            eda_hleb = randk.Next(1, 4); //случайное число в интервале от 1 до 3 включительно
-            eda_skot = randk.Next(0, 2); //случайное число в интервале от 0 до 1 включительно
-            money_trat = randk.Next(10, 101); //случайное число в интервале от 10 до 100 включительно
-            naim = randk.Next(5, 51); //случайное число в интервале от 5 до 50 включительно
+            proizv_hleb = Program.randk.Next(1, 11); //случайное число в интервале от 1 до 10 включительно
+            proizv_skot = Program.randk.Next(0, 3); //случайное число в интервале от 0 до 2 включительно
+            eda_hleb = Program.randk.Next(1, 4); //случайное число в интервале от 1 до 3 включительно
+            eda_skot = Program.randk.Next(0, 2); //случайное число в интервале от 0 до 1 включительно
+            money_trat = Program.randk.Next(10, 101); //случайное число в интервале от 10 до 100 включительно
+            naim = Program.randk.Next(5, 51); //случайное число в интервале от 5 до 50 включительно
 	        otschet_hours_net_edi=0;
         }
 

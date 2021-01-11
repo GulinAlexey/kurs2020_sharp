@@ -30,6 +30,8 @@ namespace kurs2020_sharp
 
         private void new_game_butt_Click(object sender, EventArgs e)
         {
+            Program.f_endgame = 0; //флаг конца игры (будет равен 1, когда игрок проиграет)
+            Program.derevn.Init_new_game(); //инициализация деревни перед началом новой игры
             Form mg = new main_game();
             mg.ShowDialog();
             mg.Controls.Clear();

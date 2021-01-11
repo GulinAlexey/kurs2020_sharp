@@ -59,5 +59,21 @@ namespace kurs2020_sharp
         {
             num_sell_TextChanged(sender, e);
         }
+
+        private void sell_butt_Click(object sender, EventArgs e)
+        {
+            if (this.hleb_radio.Checked == true) //если выбран хлеб для продажи
+            {
+                Program.derevn.set_kolvo_hleb(Program.derevn.get_kolvo_hleb() - Convert.ToInt32(this.num_sell.Text)); //вычесть выбранное кол-ва хлеба из ресурсов деревни
+                Program.derevn.set_budget_village(Program.derevn.get_budget_village() + Convert.ToInt32(this.num_sell.Text) * Program.derevn.get_price_hleb()); //начислить деньги за продажу
+
+            }
+            if (this.skot_radio.Checked == true) //если выбран скот для продажи
+            {
+                Program.derevn.set_kolvo_skot(Program.derevn.get_kolvo_skot() - Convert.ToInt32(this.num_sell.Text)); //вычесть выбранное кол-ва скота из ресурсов деревни
+                Program.derevn.set_budget_village(Program.derevn.get_budget_village() + Convert.ToInt32(this.num_sell.Text) * Program.derevn.get_price_skot()); //начислить деньги за продажу
+            }
+            num_sell_TextChanged(sender, e);
+        }
     }
 }

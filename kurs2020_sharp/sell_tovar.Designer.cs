@@ -100,6 +100,7 @@
             this.sell_butt.TabStop = false;
             this.sell_butt.Text = "Продать";
             this.sell_butt.UseVisualStyleBackColor = true;
+            this.sell_butt.Click += new System.EventHandler(this.sell_butt_Click);
             // 
             // hleb_or_skot
             // 

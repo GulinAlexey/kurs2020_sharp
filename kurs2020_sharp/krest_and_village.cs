@@ -217,7 +217,30 @@ namespace kurs2020_sharp
 	        krests=null;
         }
 
-
+        public void Init_new_game() //инициализация при начале новой игры
+        {
+	        if(krests!=null)
+	        {
+		       krests = null;
+	        }
+	        kolvo_krest=3;
+	        hours_procv=1;
+	        days_procv=0;
+	        speed_life=1;
+	        flag_season=0;
+	        kolvo_hleb=200;
+	        kolvo_skot=20;
+	        budget_village=1000;
+	        hours_from_begin_of_season=0;
+	        otschet_hours_net_krest=0;
+	        price_hleb=30;
+	        price_skot=200;
+	        krests = new Krest [3];
+	        for(int i=0; i<3; i++)
+	        {
+		        krests[i].Init_rand();
+	        }
+        }
 
         //Получение и установление соответствующих полей для деревни
         public void set_kolvo_krest(int inn)

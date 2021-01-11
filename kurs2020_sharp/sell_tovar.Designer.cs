@@ -158,6 +158,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Товарная биржа";
+            this.Activated += new System.EventHandler(this.sell_tovar_Activated);
             this.hleb_or_skot.ResumeLayout(false);
             this.hleb_or_skot.PerformLayout();
             this.ResumeLayout(false);

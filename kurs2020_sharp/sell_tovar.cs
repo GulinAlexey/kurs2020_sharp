@@ -15,5 +15,11 @@ namespace kurs2020_sharp
         {
             InitializeComponent();
         }
+
+        private void sell_tovar_Activated(object sender, EventArgs e)
+        {
+            this.price_hleb_text.Text = "Текущая цена за ед. хлеба: " + (Program.derevn.get_price_hleb()) + " руб.";
+            this.price_skot_text.Text = "Текущая цена за голову скота: " + (Program.derevn.get_price_skot()) + " руб.";
+        }
     }
 }

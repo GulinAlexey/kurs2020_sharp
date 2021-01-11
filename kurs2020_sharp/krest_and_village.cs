@@ -47,14 +47,14 @@ namespace kurs2020_sharp
                 reader.Close(); //закрыть файл
             }
             
-            int num_name = Program.randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
+            int num_name = Program.randk.Next(0, kolvo_name-1); //получить случайный номер слова из общего кол-ва
 
             using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
             {
                 for (int i_n=0; ; i_n++)
 	                {
 		                name=reader.ReadLine(); //получить строку из файла
-		                if (i_n==num_name+1) //если это искомое слово, остановить цикл
+		                if (i_n==num_name) //если это искомое слово, остановить цикл
 			                break;
 	                }
                 reader.Close(); //закрыть файл
@@ -74,14 +74,14 @@ namespace kurs2020_sharp
                 reader.Close(); //закрыть файл
             }
 
-            int num_sur = Program.randk.Next(0, kolvo_name); //получить случайный номер слова из общего кол-ва
+            int num_sur = Program.randk.Next(0, kolvo_name-1); //получить случайный номер слова из общего кол-ва
 
             using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
             {
                 for (int i_nn=0; ; i_nn++)
 	                {
 		                surname=reader.ReadLine(); //получить строку из файла
-		                if (i_nn==num_sur+1) //если это искомое слово, остановить цикл
+		                if (i_nn==num_sur) //если это искомое слово, остановить цикл
 			                break;
 	                }
 	                reader.Close(); //закрыть файл

@@ -39,6 +39,7 @@ namespace kurs2020_sharp
 			}
 
 		}
+
         }
 
         private void tabl_naim_Load(object sender, EventArgs e)
@@ -61,6 +62,31 @@ namespace kurs2020_sharp
 			{
                 Program.birzh_trud.krests[v].Init_rand();
 			}
+        }
+
+        private void num_krest_pole_TextChanged(object sender, EventArgs e)
+        {
+            int kolvo_strr = Program.birzh_trud.get_kolvo_krest(); //получить кол-во крестьян в списке
+            if (this.num_krest_pole.Text !="") //если поле с номером строки не пустое
+            {
+                int nummk = Convert.ToInt32(this.num_krest_pole.Text); //номер выбранного крестьянина
+                if ((nummk > kolvo_strr) || (nummk < 1)) //если выбр. строка больше общего кол-ва строк, то отключить кнопку
+                {
+                    this.naim_butt.Enabled = false;
+                }
+                else
+                {
+                    this.naim_butt.Enabled = true;
+                    if ((Program.derevn.get_budget_village() - Program.birzh_trud.krests[nummk - 1].get_naim()) < 0)
+                        this.naim_butt.Enabled = false;
+                }
+            }
+            else
+                this.naim_butt.Enabled = false;
+            if (Program.derevn.get_flag_season() == 1) //если зима, закрыть форму
+            {
+                Close();
+            }
         }
     }
 }

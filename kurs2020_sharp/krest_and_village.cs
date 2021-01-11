@@ -283,6 +283,24 @@ namespace kurs2020_sharp
 	        kolvo_krest=kolvo_krest+1; //теперь на 1 крестьянина больше
         }
 
+        public void Naim_krest(Village vil_naim, int numk) //найм крестьянина с выбранным номером из биржи труда (нумерация от единицы!)
+        {
+	        Krest[] kre_change = new Krest[kolvo_krest+1]; //временный массив крестьян
+            for (int kk = 0; kk < (kolvo_krest + 1); kk++)
+            {
+                kre_change[kk] = new Krest();
+            }
+	        int j;
+	        for(j=0; j<kolvo_krest; j++) //перебрать весь массив крестьян в деревне
+	        {
+		        kre_change[j]=this.krests[j];
+	        }
+	        kre_change[j]=vil_naim.krests[numk-1]; //новый крестьянин берётся из массива найма под нужным номером (нумерация от единицы, а не от нуля!)
+	        krests = null; //удалить старый массив
+	        krests = kre_change; //теперь указатель указывает на новый массив
+	        kolvo_krest=kolvo_krest+1; //теперь на 1 крестьянина больше
+        }
+
         //Получение и установление соответствующих полей для деревни
         public void set_kolvo_krest(int inn)
         {

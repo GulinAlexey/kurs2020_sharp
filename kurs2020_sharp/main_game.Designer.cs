@@ -284,6 +284,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Игра \"Управление деревней\"";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.main_game_Load);
             this.lent_menu.ResumeLayout(false);
             this.lent_menu.PerformLayout();
             this.pomoshnik_box.ResumeLayout(false);

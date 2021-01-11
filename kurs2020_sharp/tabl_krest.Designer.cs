@@ -221,6 +221,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список крестьян";
+            this.Activated += new System.EventHandler(this.tabl_krest_Activated);
             this.izgnat_box.ResumeLayout(false);
             this.izgnat_box.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spisok)).EndInit();

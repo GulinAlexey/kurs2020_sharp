@@ -19,8 +19,8 @@ namespace kurs2020_sharp
         }
 
         //Обявления переменных
-        public static Village derevn; //объект, в котором хранится вся информация о деревне (глобальн.)
-        public static Village birzh_trud; //объект, в котором хранятся крестьяне для найма (глобальн.)
+        public static Village derevn = new Village(); //объект, в котором хранится вся информация о деревне (глобальн.)
+        public static Village birzh_trud = new Village(); //объект, в котором хранятся крестьяне для найма (глобальн.)
         public static int f_endgame = 0; //флаг о том, что игра окончена (игрок проиграл) (глобальн.)
     }
 }

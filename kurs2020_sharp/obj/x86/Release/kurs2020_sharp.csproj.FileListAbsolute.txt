@@ -11,3 +11,4 @@ C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\R
 C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.record_tabl.resources
 C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.sell_tovar.resources
 C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.tabl_krest.resources
+C:\Users\Алексей\Documents\GitHub\kurs2020_sharp\kurs2020_sharp\obj\x86\Release\kurs2020_sharp.tabl_naim.resources

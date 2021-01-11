@@ -198,7 +198,7 @@ namespace kurs2020_sharp
         private int price_hleb; //Текущая цена за ед. хлеба на Торговой бирже в рублях 
         private int price_skot; //Текущая цена за одну голову домашнего скота на Торговой бирже в рублях 
 
-        public Krest[] krests; //крестьяне
+        public Krest[] krests = null; //крестьяне
 
         public Village() //конструктор без параметров
         {
@@ -236,10 +236,14 @@ namespace kurs2020_sharp
 	        price_hleb=30;
 	        price_skot=200;
 	        krests = new Krest [3];
-	        for(int i=0; i<3; i++)
-	        {
-		        krests[i].Init_rand();
-	        }
+            for (int kk = 0; kk < 3; kk++)
+            {
+                krests[kk] = new Krest();
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                krests[i].Init_rand();
+            }
         }
 
         //Получение и установление соответствующих полей для деревни

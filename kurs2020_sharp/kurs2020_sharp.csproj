@@ -109,6 +109,12 @@
     <Compile Include="tabl_krest.Designer.cs">
       <DependentUpon>tabl_krest.cs</DependentUpon>
     </Compile>
+    <Compile Include="tabl_naim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tabl_naim.Designer.cs">
+      <DependentUpon>tabl_naim.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tabl_krest.resx">
       <DependentUpon>tabl_krest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabl_naim.resx">
+      <DependentUpon>tabl_naim.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

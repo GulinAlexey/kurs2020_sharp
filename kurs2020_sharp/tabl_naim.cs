@@ -9,18 +9,11 @@ using System.Windows.Forms;
 
 namespace kurs2020_sharp
 {
-    public partial class tabl_krest : Form
+    public partial class tabl_naim : Form
     {
-        public tabl_krest()
+        public tabl_naim()
         {
             InitializeComponent();
-        }
-
-        private void trud_butt_Click(object sender, EventArgs e)
-        {
-            Form tabnaim = new tabl_naim();
-            tabnaim.ShowDialog();
-            tabnaim.Controls.Clear();
         }
     }
 }

@@ -46,5 +46,34 @@ namespace kurs2020_sharp
 		    }
 
         }
+
+        private void num_krest_pole_TextChanged(object sender, EventArgs e)
+        {
+            int kolvo_strr=Program.derevn.get_kolvo_krest(); //получить кол-во крестьян в списке
+			if (this.num_krest_pole.Text!="") //если поле с номером строки не пустое
+			{
+				if((Convert.ToDouble(this.num_krest_pole.Text) > kolvo_strr) || (Convert.ToDouble(this.num_krest_pole.Text)<1)) //если выбр. строка больше общего кол-ва строк, то отключить кнопку
+				{
+					this.izgnat_butt.Enabled = false;
+				}
+				else
+					this.izgnat_butt.Enabled = true;
+			}
+			else
+				this.izgnat_butt.Enabled = false;
+			if(Program.derevn.get_flag_season()==1) //если зима, кнопка Изгнать недоступна в любом случае
+			{
+				this.label1.Enabled = false;
+				this.num_krest_pole.Enabled = false;
+				this.izgnat_butt.Enabled = false;
+				this.trud_butt.Enabled = false;
+			}
+			if(Program.derevn.get_flag_season()==0) //если лето, включить кнопку открытия Биржи труда
+			{
+				this.label1.Enabled = true;
+				this.num_krest_pole.Enabled = true;
+				this.trud_butt.Enabled = true;
+			}
+        }
     }
 }

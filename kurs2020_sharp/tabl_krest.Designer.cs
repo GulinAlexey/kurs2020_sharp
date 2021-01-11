@@ -77,6 +77,7 @@
             this.num_krest_pole.TabIndex = 16;
             this.num_krest_pole.TabStop = false;
             this.num_krest_pole.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.num_krest_pole.TextChanged += new System.EventHandler(this.num_krest_pole_TextChanged);
             // 
             // label1
             // 

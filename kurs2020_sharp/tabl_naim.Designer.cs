@@ -100,6 +100,7 @@
             this.naim_butt.TabStop = false;
             this.naim_butt.Text = "Нанять";
             this.naim_butt.UseVisualStyleBackColor = true;
+            this.naim_butt.Click += new System.EventHandler(this.naim_butt_Click);
             // 
             // label2
             // 

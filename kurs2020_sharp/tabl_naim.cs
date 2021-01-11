@@ -88,5 +88,15 @@ namespace kurs2020_sharp
                 Close();
             }
         }
+
+        private void naim_butt_Click(object sender, EventArgs e)
+        {
+             int nummk = Convert.ToInt32(this.num_krest_pole.Text); //номер выбранного крестьянина
+             Program.derevn.set_budget_village(Program.derevn.get_budget_village() - Program.birzh_trud.krests[nummk - 1].get_naim());
+             Program.derevn.Naim_krest(Program.birzh_trud, nummk);
+             Program.birzh_trud.Delete_krest(nummk); //крестьянин перешёл из одного массива в другой. Из начального массива он удаляется
+			 num_krest_pole_TextChanged(sender,e); //повторная проверка
+			 tabl_naim_Activated(sender,e); //обновить таблицу
+        }
     }
 }

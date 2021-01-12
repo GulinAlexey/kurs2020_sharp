@@ -23,25 +23,28 @@ namespace kurs2020_sharp
 
         private void spravk_butt_Click(object sender, EventArgs e)
         {
-            Form spr = new spravk();
-            spr.ShowDialog();
-            spr.Controls.Clear();
+            using (Form spr = new spravk())
+            {
+                spr.ShowDialog();
+            }
         }
 
         private void new_game_butt_Click(object sender, EventArgs e)
         {
             Program.f_endgame = 0; //флаг конца игры (будет равен 1, когда игрок проиграет)
             Program.derevn.Init_new_game(); //инициализация деревни перед началом новой игры
-            Form mg = new main_game();
-            mg.ShowDialog();
-            mg.Controls.Clear();
+            using (Form mg = new main_game())
+            {
+                mg.ShowDialog();
+            }
         }
 
         private void records_butt_Click(object sender, EventArgs e)
         {
-            Form rectab = new record_tabl();
-            rectab.ShowDialog();
-            rectab.Controls.Clear();
+            using (Form rectab = new record_tabl())
+            {
+                rectab.ShowDialog();
+            }
         }
     }
 }

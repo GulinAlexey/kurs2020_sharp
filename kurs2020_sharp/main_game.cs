@@ -23,23 +23,26 @@ namespace kurs2020_sharp
 
         private void spravk_lent_butt_Click(object sender, EventArgs e)
         {
-            Form sprv = new spravk();
-            sprv.ShowDialog();
-            sprv.Controls.Clear();
+            using (Form sprv = new spravk())
+            {
+                sprv.ShowDialog();
+            }
         }
 
         private void spisok_krest_butt_Click(object sender, EventArgs e)
         {
-            Form tablk = new tabl_krest();
-            tablk.ShowDialog();
-            tablk.Controls.Clear();
+            using (Form tablk = new tabl_krest())
+            {
+                tablk.ShowDialog();
+            }
         }
 
         private void birzha_butt_Click(object sender, EventArgs e)
         {
-            Form sellt = new sell_tovar();
-            sellt.ShowDialog();
-            sellt.Controls.Clear();
+            using (Form sellt = new sell_tovar())
+            {
+                sellt.ShowDialog();
+            }
         }
 
         private void main_game_Load(object sender, EventArgs e)

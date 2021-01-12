@@ -18,9 +18,10 @@ namespace kurs2020_sharp
 
         private void trud_butt_Click(object sender, EventArgs e)
         {
-            Form tabnaim = new tabl_naim();
-            tabnaim.ShowDialog();
-            tabnaim.Controls.Clear();
+            using (Form tabnaim = new tabl_naim())
+            {
+                tabnaim.ShowDialog();
+            }
         }
 
         private void tabl_krest_Activated(object sender, EventArgs e)

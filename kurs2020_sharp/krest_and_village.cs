@@ -244,6 +244,47 @@ namespace kurs2020_sharp
             }
         }
 
+        public void Save_game() //сохранение игры (запись информации о деревне в файл)
+        {
+            string path= "village.txt"; //путь для записи информации о деревне (крестьяне отдельно)
+            using (StreamWriter writer = new StreamWriter(path)) //открытие файла для чтения
+            {
+                writer.WriteLine(kolvo_krest); //записать в файл
+	            writer.WriteLine(hours_procv); //записать в файл
+	            writer.WriteLine(days_procv); //записать в файл
+	            writer.WriteLine(speed_life); //записать в файл
+	            writer.WriteLine(flag_season); //записать в файл
+	            writer.WriteLine(kolvo_hleb); //записать в файл
+	            writer.WriteLine(kolvo_skot); //записать в файл
+	            writer.WriteLine(budget_village); //записать в файл
+	            writer.WriteLine(hours_from_begin_of_season); //записать в файл
+	            writer.WriteLine(otschet_hours_net_krest); //записать в файл
+	            writer.WriteLine(price_hleb); //записать в файл
+	            writer.WriteLine(price_skot); //записать в файл
+
+	            writer.Close(); //закрыть файл
+            }
+
+            path= "krests.txt"; //путь для записи информации о крестьянах
+            using (StreamWriter writer = new StreamWriter(path)) //открытие файла для чтения
+            {
+                for (int m = 0; m < kolvo_krest; m++)
+                {
+                    writer.WriteLine(krests[m].get_name(); //записать в файл
+                    writer.WriteLine(krests[m].get_surname(); //записать в файл
+                    writer.WriteLine(krests[m].get_proizv_hleb(); //записать в файл
+                    writer.WriteLine(krests[m].get_proizv_skot(); //записать в файл
+                    writer.WriteLine(krests[m].get_eda_hleb(); //записать в файл
+                    writer.WriteLine(krests[m].get_eda_skot(); //записать в файл
+                    writer.WriteLine(krests[m].get_money_trat(); //записать в файл
+                    writer.WriteLine(krests[m].get_naim(); //записать в файл
+                    writer.WriteLine(krests[m].get_otschet_hours_net_edi(); //записать в файл
+                    writer.WriteLine("///////"); //записать в файл
+                }
+                writer.Close(); //закрыть файл
+            }
+        }
+
 
         public void Delete_krest(int number) //удаление крестьянина с выбранным номером (нумерация от единицы!)
         {

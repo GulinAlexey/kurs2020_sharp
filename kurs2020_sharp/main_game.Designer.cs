@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_game));
             this.label1 = new System.Windows.Forms.Label();
             this.lent_menu = new System.Windows.Forms.MenuStrip();
@@ -47,6 +48,7 @@
             this.pomoshnik_box = new System.Windows.Forms.GroupBox();
             this.event_helper = new System.Windows.Forms.Label();
             this.time_helper = new System.Windows.Forms.Label();
+            this.main_timer = new System.Windows.Forms.Timer(this.components);
             this.lent_menu.SuspendLayout();
             this.pomoshnik_box.SuspendLayout();
             this.SuspendLayout();
@@ -257,6 +259,12 @@
             this.time_helper.TabIndex = 0;
             this.time_helper.Text = "До конца этого времени года осталось 11 Часов Процветания.";
             // 
+            // main_timer
+            // 
+            this.main_timer.Enabled = true;
+            this.main_timer.Interval = 3000;
+            this.main_timer.Tick += new System.EventHandler(this.main_timer_Tick);
+            // 
             // main_game
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -314,5 +322,6 @@
         private System.Windows.Forms.GroupBox pomoshnik_box;
         private System.Windows.Forms.Label event_helper;
         private System.Windows.Forms.Label time_helper;
+        private System.Windows.Forms.Timer main_timer;
     }
 }

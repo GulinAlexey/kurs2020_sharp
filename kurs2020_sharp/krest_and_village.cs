@@ -247,7 +247,7 @@ namespace kurs2020_sharp
         public void Save_game() //сохранение игры (запись информации о деревне в файл)
         {
             string path= "village.txt"; //путь для записи информации о деревне (крестьяне отдельно)
-            using (StreamWriter writer = new StreamWriter(path)) //открытие файла для чтения
+            using (StreamWriter writer = new StreamWriter(path)) //открытие файла для записи
             {
                 writer.WriteLine(kolvo_krest); //записать в файл
 	            writer.WriteLine(hours_procv); //записать в файл
@@ -285,6 +285,59 @@ namespace kurs2020_sharp
             }
         }
 
+        public void Init_load_game() //инициализация при загрузке сохранённой игры
+        {
+	        if(krests!=null)
+	        {
+		        krests = null;
+	        }
+            string path= "village.txt"; //путь для чтения информации о деревне (крестьяне отдельно)
+
+	        string strread; //строка для чтения из файла
+
+            using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
+            {
+	            kolvo_krest=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            hours_procv=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            days_procv=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            speed_life=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            flag_season=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            kolvo_hleb=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            kolvo_skot=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            budget_village=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            hours_from_begin_of_season=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            otschet_hours_net_krest=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            price_hleb=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+	            price_skot=Convert.ToInt32(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+
+	            reader.Close(); //закрыть файл
+            }
+
+	        krests = new Krest [kolvo_krest];
+            for (int kk = 0; kk < kolvo_krest; kk++)
+            {
+                krests[kk] = new Krest();
+            }
+
+            path = "krests.txt"; //путь для чтения информации о крестьянах
+            using (StreamReader reader = new StreamReader(path)) //открытие файла для чтения
+            {
+                for (int m = 0; m < kolvo_krest; m++)
+                {
+                    krests[m].set_name(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+                    krests[m].set_surname(reader.ReadLine()); //получить строку из файла, записать в нужное поле
+                    krests[m].set_proizv_hleb(Convert.ToInt32(reader.ReadLine())); //получить строку из файла, записать в нужное поле
+                    krests[m].set_proizv_skot(Convert.ToInt32(reader.ReadLine())); //получить строку из файла, записать в нужное поле
+                    krests[m].set_eda_hleb(Convert.ToInt32(reader.ReadLine())); //получить строку из файла, записать в нужное поле
+                    krests[m].set_eda_skot(Convert.ToInt32(reader.ReadLine())); //получить строку из файла, записать в нужное поле
+                    krests[m].set_money_trat(Convert.ToInt32(reader.ReadLine())); //получить строку из файла, записать в нужное поле
+                    krests[m].set_naim(Convert.ToInt32(reader.ReadLine())); //получить строку из файла, записать в нужное поле
+                    krests[m].set_otschet_hours_net_edi(Convert.ToInt32(reader.ReadLine())); //получить строку из файла, записать в нужное поле
+                    strread = reader.ReadLine(); //прочитать строку "///////", отделяющую данные разных крестьян
+                }
+                reader.Close(); //закрыть файл
+            }
+        }
 
         public void Delete_krest(int number) //удаление крестьянина с выбранным номером (нумерация от единицы!)
         {

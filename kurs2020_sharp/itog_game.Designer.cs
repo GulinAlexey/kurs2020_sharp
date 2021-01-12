@@ -99,6 +99,7 @@
             this.name_player.TabIndex = 7;
             this.name_player.Text = "player";
             this.name_player.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name_player.TextChanged += new System.EventHandler(this.name_player_TextChanged);
             // 
             // ok_record
             // 
@@ -120,6 +121,7 @@
             this.close.TabIndex = 9;
             this.close.Text = "закрыть без сохранения рекорда";
             this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // itog_game
             // 
@@ -145,6 +147,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Конец игры";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.itog_game_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

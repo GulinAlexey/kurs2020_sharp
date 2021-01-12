@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabl_krest));
             this.label3 = new System.Windows.Forms.Label();
             this.izgnat_box = new System.Windows.Forms.GroupBox();
@@ -42,6 +43,7 @@
             this.proizv_tabl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prozhorl_tabl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rashod_tabl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer_proverk_krest = new System.Windows.Forms.Timer(this.components);
             this.izgnat_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spisok)).BeginInit();
             this.SuspendLayout();
@@ -205,6 +207,12 @@
             this.rashod_tabl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.rashod_tabl.Width = 200;
             // 
+            // timer_proverk_krest
+            // 
+            this.timer_proverk_krest.Enabled = true;
+            this.timer_proverk_krest.Interval = 1003;
+            this.timer_proverk_krest.Tick += new System.EventHandler(this.timer_proverk_krest_Tick);
+            // 
             // tabl_krest
             // 
             this.AcceptButton = this.izgnat_butt;
@@ -249,5 +257,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn proizv_tabl;
         private System.Windows.Forms.DataGridViewTextBoxColumn prozhorl_tabl;
         private System.Windows.Forms.DataGridViewTextBoxColumn rashod_tabl;
+        private System.Windows.Forms.Timer timer_proverk_krest;
     }
 }

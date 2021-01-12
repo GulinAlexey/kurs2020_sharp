@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(spravk));
             this.spravka_info = new System.Windows.Forms.TextBox();
             this.cloz = new System.Windows.Forms.Button();
+            this.timer_endgame = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // spravka_info
@@ -56,6 +58,12 @@
             this.cloz.Text = "Закрыть";
             this.cloz.UseVisualStyleBackColor = true;
             this.cloz.Click += new System.EventHandler(this.cloz_Click);
+            // 
+            // timer_endgame
+            // 
+            this.timer_endgame.Enabled = true;
+            this.timer_endgame.Interval = 1003;
+            this.timer_endgame.Tick += new System.EventHandler(this.timer_endgame_Tick);
             // 
             // spravk
             // 
@@ -84,5 +92,6 @@
 
         private System.Windows.Forms.TextBox spravka_info;
         private System.Windows.Forms.Button cloz;
+        private System.Windows.Forms.Timer timer_endgame;
     }
 }

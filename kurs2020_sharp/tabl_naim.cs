@@ -98,5 +98,19 @@ namespace kurs2020_sharp
 			 num_krest_pole_TextChanged(sender,e); //повторная проверка
 			 tabl_naim_Activated(sender,e); //обновить таблицу
         }
+
+        private void timer_proverk_krest_Tick(object sender, EventArgs e)
+        {
+            if (Program.f_endgame == 1) //игра закончилась, закрыть все формы
+                Close();
+            else
+            {
+                num_krest_pole_TextChanged(sender, e); //повторная проверка
+                if (Program.derevn.get_flag_season() == 0) //таблицу обновлять только летом
+                {
+                    tabl_naim_Activated(sender, e); //обновить таблицу
+                }
+            }
+        }
     }
 }

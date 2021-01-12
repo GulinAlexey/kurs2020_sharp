@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sell_tovar));
             this.price_hleb_text = new System.Windows.Forms.Label();
             this.price_skot_text = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.hleb_or_skot = new System.Windows.Forms.GroupBox();
             this.skot_radio = new System.Windows.Forms.RadioButton();
             this.hleb_radio = new System.Windows.Forms.RadioButton();
+            this.timer_proverka = new System.Windows.Forms.Timer(this.components);
             this.hleb_or_skot.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,6 +142,12 @@
             this.hleb_radio.Text = "Хлеб";
             this.hleb_radio.UseVisualStyleBackColor = false;
             // 
+            // timer_proverka
+            // 
+            this.timer_proverka.Enabled = true;
+            this.timer_proverka.Interval = 1003;
+            this.timer_proverka.Tick += new System.EventHandler(this.timer_proverka_Tick);
+            // 
             // sell_tovar
             // 
             this.AcceptButton = this.sell_butt;
@@ -179,5 +187,6 @@
         private System.Windows.Forms.GroupBox hleb_or_skot;
         private System.Windows.Forms.RadioButton skot_radio;
         private System.Windows.Forms.RadioButton hleb_radio;
+        private System.Windows.Forms.Timer timer_proverka;
     }
 }

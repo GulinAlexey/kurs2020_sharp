@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabl_naim));
             this.label3 = new System.Windows.Forms.Label();
             this.naim_box = new System.Windows.Forms.GroupBox();
@@ -42,6 +43,7 @@
             this.prozhorl_tabl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rashod_tabl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naim_money_tabl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer_proverk_krest = new System.Windows.Forms.Timer(this.components);
             this.naim_box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spisok)).BeginInit();
             this.SuspendLayout();
@@ -204,6 +206,12 @@
             this.naim_money_tabl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.naim_money_tabl.Width = 91;
             // 
+            // timer_proverk_krest
+            // 
+            this.timer_proverk_krest.Enabled = true;
+            this.timer_proverk_krest.Interval = 1003;
+            this.timer_proverk_krest.Tick += new System.EventHandler(this.timer_proverk_krest_Tick);
+            // 
             // tabl_naim
             // 
             this.AcceptButton = this.naim_butt;
@@ -249,5 +257,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prozhorl_tabl;
         private System.Windows.Forms.DataGridViewTextBoxColumn rashod_tabl;
         private System.Windows.Forms.DataGridViewTextBoxColumn naim_money_tabl;
+        private System.Windows.Forms.Timer timer_proverk_krest;
     }
 }

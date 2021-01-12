@@ -20,5 +20,11 @@ namespace kurs2020_sharp
         {
             this.Close();
         }
+
+        private void timer_endgame_Tick(object sender, EventArgs e)
+        {
+            if (Program.f_endgame == 1) //игра закончилась, закрыть все формы
+                this.Close();
+        }
     }
 }

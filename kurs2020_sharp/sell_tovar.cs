@@ -75,5 +75,16 @@ namespace kurs2020_sharp
             }
             num_sell_TextChanged(sender, e);
         }
+
+        private void timer_proverka_Tick(object sender, EventArgs e)
+        {
+            if (Program.f_endgame == 1) //игра закончилась, закрыть все формы
+                this.Close();
+            else
+            {
+                num_sell_TextChanged(sender, e); //повторная проверка
+                sell_tovar_Activated(sender, e); //обновить таблицу
+            }
+        }
     }
 }

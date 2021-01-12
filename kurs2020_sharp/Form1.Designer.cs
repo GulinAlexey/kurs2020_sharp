@@ -106,6 +106,7 @@
             this.load_game_butt.TabIndex = 2;
             this.load_game_butt.Text = "Загрузка\r\nнезаконченной игры";
             this.load_game_butt.UseVisualStyleBackColor = true;
+            this.load_game_butt.Click += new System.EventHandler(this.load_game_butt_Click);
             // 
             // records_butt
             // 

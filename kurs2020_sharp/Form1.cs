@@ -46,5 +46,15 @@ namespace kurs2020_sharp
                 rectab.ShowDialog();
             }
         }
+
+        private void load_game_butt_Click(object sender, EventArgs e)
+        {
+            Program.f_endgame = 0; //флаг конца игры (будет равен 1, когда игрок проиграет)
+            Program.derevn.Init_load_game(); //инициализация деревни из файла перед продолжением сохранённой игры
+            using (Form mg = new main_game())
+            {
+                mg.ShowDialog();
+            }
+        }
     }
 }

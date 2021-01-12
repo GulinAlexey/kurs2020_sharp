@@ -49,6 +49,7 @@
             this.event_helper = new System.Windows.Forms.Label();
             this.time_helper = new System.Windows.Forms.Label();
             this.main_timer = new System.Windows.Forms.Timer(this.components);
+            this.timer_refresh = new System.Windows.Forms.Timer(this.components);
             this.lent_menu.SuspendLayout();
             this.pomoshnik_box.SuspendLayout();
             this.SuspendLayout();
@@ -265,6 +266,12 @@
             this.main_timer.Interval = 3000;
             this.main_timer.Tick += new System.EventHandler(this.main_timer_Tick);
             // 
+            // timer_refresh
+            // 
+            this.timer_refresh.Enabled = true;
+            this.timer_refresh.Interval = 512;
+            this.timer_refresh.Tick += new System.EventHandler(this.timer_refresh_Tick);
+            // 
             // main_game
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -323,5 +330,6 @@
         private System.Windows.Forms.Label event_helper;
         private System.Windows.Forms.Label time_helper;
         private System.Windows.Forms.Timer main_timer;
+        private System.Windows.Forms.Timer timer_refresh;
     }
 }

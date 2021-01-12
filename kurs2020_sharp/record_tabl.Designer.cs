@@ -98,6 +98,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список рекордов";
+            this.Load += new System.EventHandler(this.record_tabl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spisok)).EndInit();
             this.ResumeLayout(false);
 

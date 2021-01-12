@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace kurs2020_sharp
 {
@@ -36,6 +37,20 @@ namespace kurs2020_sharp
 			 {
 			    this.ok_record.Enabled=true;
 			 }
+        }
+
+        private void ok_record_Click(object sender, EventArgs e)
+        {
+             string path= "records.txt"; //путь для записи рекордов
+            using (StreamWriter stream = new StreamWriter(path, true))
+            {
+                stream.WriteLine(this.name_player.Text); //записать имя игрока в файл
+                stream.WriteLine(this.your_scores.Text); //записать рекорд игрока в файл (реализовано так, чтобы рекорд нельзя было изменить, начав новую игру, не закрыв окно с финальным счётом)
+                stream.WriteLine("///////"); //записать разделитель в файл (отделяет рекорды друг от друга)
+                stream.Close();
+            }
+			 
+			 this.Close();
         }
     }
 }

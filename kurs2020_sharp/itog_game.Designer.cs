@@ -110,6 +110,7 @@
             this.ok_record.TabIndex = 8;
             this.ok_record.Text = "записать и закрыть";
             this.ok_record.UseVisualStyleBackColor = true;
+            this.ok_record.Click += new System.EventHandler(this.ok_record_Click);
             // 
             // close
             // 

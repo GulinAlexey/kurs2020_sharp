@@ -63,10 +63,8 @@ namespace kurs2020_sharp
             if(Program.f_endgame==1)
 			 {
 				Program.f_endgame=0;
-				using (Form ig = new itog_game())
-                {
-                    ig.Show();
-                }
+                Form ig = new itog_game();
+                ig.Show();
 			 }
 			 if(!(System.IO.File.Exists("village.txt")) || !(System.IO.File.Exists("krests.txt"))) //проверка, есть ли файлы сохранения. Если хотя бы одного нет, то кнопка загрузки игры отключается
 			 {

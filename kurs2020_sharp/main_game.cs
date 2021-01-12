@@ -228,5 +228,11 @@ namespace kurs2020_sharp
             if (Program.derevn.get_flag_season() == 1)
                 this.time_helper.Text = "До конца Зимы осталось " + (20 - (Program.derevn.get_hours_procv() - Program.derevn.get_hours_from_begin_of_season())) + " Часов Процветания.";
         }
+
+        private void save_game_butt_Click(object sender, EventArgs e)
+        {
+            Program.derevn.Save_game(); //сохранить игру в файл
+            this.save_complete.Visible = true; //показать надпись об успешном сохранении
+        }
     }
 }

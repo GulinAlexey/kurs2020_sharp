@@ -72,10 +72,10 @@
             this.save_game_butt,
             this.spravk_lent_butt,
             this.go_to_main_menu_butt});
-            this.lent_menu.Location = new System.Drawing.Point(474, 0);
+            this.lent_menu.Location = new System.Drawing.Point(382, 0);
             this.lent_menu.Name = "lent_menu";
             this.lent_menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lent_menu.Size = new System.Drawing.Size(372, 24);
+            this.lent_menu.Size = new System.Drawing.Size(464, 24);
             this.lent_menu.TabIndex = 12;
             this.lent_menu.Text = "lent_menu";
             // 
@@ -85,6 +85,7 @@
             this.save_game_butt.Name = "save_game_butt";
             this.save_game_butt.Size = new System.Drawing.Size(122, 20);
             this.save_game_butt.Text = "Сохранить игру";
+            this.save_game_butt.Click += new System.EventHandler(this.save_game_butt_Click);
             // 
             // spravk_lent_butt
             // 

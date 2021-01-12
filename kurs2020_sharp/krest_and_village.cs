@@ -270,15 +270,15 @@ namespace kurs2020_sharp
             {
                 for (int m = 0; m < kolvo_krest; m++)
                 {
-                    writer.WriteLine(krests[m].get_name(); //записать в файл
-                    writer.WriteLine(krests[m].get_surname(); //записать в файл
-                    writer.WriteLine(krests[m].get_proizv_hleb(); //записать в файл
-                    writer.WriteLine(krests[m].get_proizv_skot(); //записать в файл
-                    writer.WriteLine(krests[m].get_eda_hleb(); //записать в файл
-                    writer.WriteLine(krests[m].get_eda_skot(); //записать в файл
-                    writer.WriteLine(krests[m].get_money_trat(); //записать в файл
-                    writer.WriteLine(krests[m].get_naim(); //записать в файл
-                    writer.WriteLine(krests[m].get_otschet_hours_net_edi(); //записать в файл
+                    writer.WriteLine(krests[m].get_name()); //записать в файл
+                    writer.WriteLine(krests[m].get_surname()); //записать в файл
+                    writer.WriteLine(krests[m].get_proizv_hleb()); //записать в файл
+                    writer.WriteLine(krests[m].get_proizv_skot()); //записать в файл
+                    writer.WriteLine(krests[m].get_eda_hleb()); //записать в файл
+                    writer.WriteLine(krests[m].get_eda_skot()); //записать в файл
+                    writer.WriteLine(krests[m].get_money_trat()); //записать в файл
+                    writer.WriteLine(krests[m].get_naim()); //записать в файл
+                    writer.WriteLine(krests[m].get_otschet_hours_net_edi()); //записать в файл
                     writer.WriteLine("///////"); //записать в файл
                 }
                 writer.Close(); //закрыть файл

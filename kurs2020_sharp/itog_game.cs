@@ -41,8 +41,8 @@ namespace kurs2020_sharp
 
         private void ok_record_Click(object sender, EventArgs e)
         {
-             string path= "records.txt"; //путь для записи рекордов
-            using (StreamWriter stream = new StreamWriter(path, true))
+            string path= "records.txt"; //путь для записи рекордов
+            using (StreamWriter stream = new StreamWriter(path, true)) //добавление записи в файл
             {
                 stream.WriteLine(this.name_player.Text); //записать имя игрока в файл
                 stream.WriteLine(this.your_scores.Text); //записать рекорд игрока в файл (реализовано так, чтобы рекорд нельзя было изменить, начав новую игру, не закрыв окно с финальным счётом)
